@@ -1,4 +1,4 @@
-package String;
+package string;
 
 //Longest SubString without the repeating characters
 public class LongestSubstring {
