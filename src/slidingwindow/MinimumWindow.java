@@ -1,4 +1,4 @@
-package SlidingWindow;
+package slidingwindow;
 
 public class MinimumWindow {
     public static void main(String[] args) {

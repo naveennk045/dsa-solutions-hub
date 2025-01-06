@@ -1,4 +1,4 @@
-package MicrosoftProblem.LargestInteger;
+package microsoft.problem.largestinteger;
 
 public class LargestInteger {
 }

@@ -1,4 +1,4 @@
-package MicrosoftProblem.ChocolateFactory;
+package microsoft.problem.chocolatefactory;
 
 public class ChocolateFactory {
 }

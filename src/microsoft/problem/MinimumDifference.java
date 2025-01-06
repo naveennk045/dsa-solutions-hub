@@ -1,4 +1,4 @@
-package MicrosoftProblem;
+package microsoft.problem;
 
 import java.util.Scanner;
 

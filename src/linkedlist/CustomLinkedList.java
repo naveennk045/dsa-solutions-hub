@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 
 public class CustomLinkedList<T> {
     private Node<T> head;
@@ -131,6 +131,25 @@ public class CustomLinkedList<T> {
         head = null;
         tail = null;
         size = 0;
+    }
+
+    public static void main(String[] args) {
+        CustomLinkedList<String> list = new CustomLinkedList<>();
+
+        list.addFirst("SK");
+        list.addFirst("NK");
+        list.addFirst("AK");
+
+        list.addLast("KK");
+//        list.add(3, 6);
+
+        list.display();
+
+        list.remove("KK");
+        list.display();
+
+        list.clear();
+        list.display();
     }
 
 }

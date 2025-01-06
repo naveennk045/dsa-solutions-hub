@@ -1,4 +1,4 @@
-package SlidingWindow;
+package slidingwindow;
 
 public class SlidingWindowVariableSize {
     public static void printAllSubarrays(int[] arr) {
