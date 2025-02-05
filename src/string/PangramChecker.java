@@ -13,6 +13,7 @@ public class PangramChecker {
             char character=sentence.charAt(i);
             if('a'<=character && character <= 'z'){
                 index=character - 'a';
+                System.out.println(index);
                 alphabet[index]=true;
             }
         }
@@ -31,12 +32,11 @@ public class PangramChecker {
 
         System.out.print("Enter Sentence : ");
         String sentence=scan.nextLine();
-
          if(isPangram(sentence.toLowerCase())){
-             System.out.println("This Sentence is palindrome");
+             System.out.println("This Sentence is pangram");
          }
          else{
-             System.out.println("This is not palindrome");
+             System.out.println("This is not pangram");
          }
     }
 }

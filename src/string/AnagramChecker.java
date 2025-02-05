@@ -1,5 +1,6 @@
 package string;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -15,7 +16,32 @@ public class AnagramChecker {
         String word2=scan.next();
 
         System.out.println(areAnagrams(word1,word2));
+        System.out.println(areAnagramsII(word1,word2));
 
+    }
+    public static Boolean areAnagramsII(String word1,String word2) {
+        if (word1.length() != word2.length()) {
+            return false;
+        }
+
+        if (word1.isEmpty() || word2.isEmpty()) {
+            return false;
+        }
+
+
+       int[] alphabets=new int[128];
+
+        for(char ch:word1.toCharArray()){
+            alphabets[ch]++;
+        }
+        for(char ch:word2.toCharArray()){
+            alphabets[ch]--;
+        }
+        System.out.println(Arrays.toString(alphabets));
+        for(int alphabet :alphabets){
+            if(alphabet!=0) return false;
+        }
+        return true;
     }
 
     public static Boolean areAnagrams(String word1,String word2) {
@@ -42,8 +68,8 @@ public class AnagramChecker {
         for(Map.Entry<Character,Integer> entry : frequency.entrySet()){
             if (entry.getValue()>0){
                 return false;
+            }
         }
-    }
         return  true;
-        }
+    }
 }

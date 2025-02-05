@@ -1,4 +1,4 @@
-package serviceNowQuestions;
+package question;
 
 import java.util.ArrayList;
 

@@ -3,6 +3,20 @@ package patternPrinting;
 import java.sql.SQLOutput;
 
 public class Basics {
+    public static void printMatrixFormat(int n){
+        n=(n%2==0)?n-1:n;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(n/2==j || n/2==i){
+                    System.out.print(0);
+                }
+                else{
+                    System.out.print(1);
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void oneDimensional(int n){
         System.out.println("Row\n");
         for (int i = 0; i < n; i++) {
@@ -49,7 +63,7 @@ public class Basics {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <n ; j++) {
                 if(j==i || j==(n-1)-i){
-                    System.out.print("* ");
+                    System.out.print("*");
                 }
                 else{
                     System.out.print(" ");
@@ -87,5 +101,7 @@ public class Basics {
         System.out.println("\nXPattern");
         printXPattern(5);
         printXPattern(6);
+        printMatrixFormat(5);
+        System.out.println();
     }
 }

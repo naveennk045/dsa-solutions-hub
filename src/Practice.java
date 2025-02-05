@@ -1,18 +1,38 @@
-import java.util.Scanner;
+// You are using Java
 
-public class Practice {
-    public static void main(String[] args) {
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){
+
         Scanner scan=new Scanner(System.in);
-        int a= scan.nextInt();
-        int  b= scan.nextInt();
-//        scan.nextLine();
-        String as= scan.nextLine();
-        String bs=scan.nextLine();
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(as);
-        System.out.println(bs);
+        char[] letters=scan.nextLine().toCharArray();
+
+        HashMap<Character,Integer> map=new HashMap<>();
+
+
+
+
+        for(char ch: letters){
+            map.put(ch,map.getOrDefault(ch,0)+1);
+        }
+//        System.out.println(map);
+
+        int length=0;
+        int ones=0;
+
+        for(Map.Entry<Character,Integer> entry : map.entrySet()){
+            int count=entry.getValue();
+            char ch=entry.getKey();
+
+            if(count>1 && count%2==0) length+=count;
+            else if(count>1 && count%2!=0) length+=count-1;
+            else ones++;
+        }
+        if(ones>0) length+=1;
+
+        System.out.println(length);
 
     }
 }

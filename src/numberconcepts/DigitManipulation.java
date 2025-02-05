@@ -1,5 +1,6 @@
 package numberconcepts;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -93,6 +94,17 @@ public class DigitManipulation {
         }
 
     }
+    public static void frequencyOfDigitsUsingArrays(int num){
+        int[] digits=new int[10];
+            while(num>0){
+                int currNUm=num%10;
+                digits[currNUm]++;
+                num/=10;
+            }
+        System.out.println(Arrays.toString(digits));
+        }
+
+
 
     public static boolean isPalindrome(int num){
         return reverseNum(num)==num;
@@ -108,6 +120,7 @@ public class DigitManipulation {
         System.out.println(largestDigit(14345));
         System.out.println(isArmstrong(1634));
         printFrequencyOfDigits(123);
+        frequencyOfDigitsUsingArrays(1234);
 
         System.out.println(isMerciNumber(15));
 
