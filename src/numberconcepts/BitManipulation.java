@@ -15,6 +15,7 @@ public class BitManipulation {
         }
         return count;
     }
+
     public static boolean powerOfTwo(int num){
         int val=num & (num-1);
         return val==0;
@@ -28,10 +29,7 @@ public class BitManipulation {
             unique^=num;
         }
         return unique;
-    }
 
-    public static int ithBit(int num,int i){
-        return num>>(i) & 1;
     }
 
     public static void main(String[] args) {
@@ -39,7 +37,6 @@ public class BitManipulation {
         System.out.println(powerOfTwo(8));
         System.out.println(findUnique(new int[]{1,1,2,3,3,3,8,6,6,2}));
         System.out.println(isOdd(9));
-        System.out.println(ithBit(10,2));
 
 
     }

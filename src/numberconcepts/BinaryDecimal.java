@@ -1,10 +1,7 @@
 package numberconcepts;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-
 import static java.lang.Integer.*;
 
 public class BinaryDecimal {

@@ -1,6 +1,6 @@
 package recursion;
 
-public class Basics {
+public class Level0 {
     public static boolean helper(int num ,int i){
         int pow=(int)Math.pow(2,i);
         if(i==Math.sqrt(num) && num!=pow) return false;

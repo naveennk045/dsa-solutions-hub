@@ -1,4 +1,4 @@
-package slidingwindow;
+package slidingwindow.twopointers;
 
 public class MinimumWindow {
     public static void main(String[] args) {
