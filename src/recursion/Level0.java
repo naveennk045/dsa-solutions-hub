@@ -1,6 +1,7 @@
 package recursion;
 
 public class Level0 {
+
     public static boolean helper(int num ,int i){
         int pow=(int)Math.pow(2,i);
         if(i==Math.sqrt(num) && num!=pow) return false;
@@ -20,6 +21,7 @@ public class Level0 {
 
         return countZeroHelper(num/10,count);
     }
+
     public static void blast(int num){
         if(num<0) {
             System.out.print("Blast off....");
@@ -28,6 +30,7 @@ public class Level0 {
         System.out.print(num+" ");
         blast(num-1);
     }
+
     //  approach 1
     public static void reverse(String word,int length,StringBuilder res){
         if(length==0){

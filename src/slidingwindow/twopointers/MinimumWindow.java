@@ -21,7 +21,8 @@ public class MinimumWindow {
         }
         System.out.println(res);
     }
-    static boolean isContains(String t,String temp){
+
+    public static boolean isContains(String t,String temp){
         boolean flag=false;
         char[] tArr=t.toCharArray();
         for (int i = 0; i < t.length(); i++) {
