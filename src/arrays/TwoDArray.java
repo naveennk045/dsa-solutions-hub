@@ -17,6 +17,34 @@ public class TwoDArray {
         }
         return true;
     }
+
+    public static int lowerTriangle(int[][] mat){
+        int sum=0;
+        int k=0;
+        for (int i = mat.length-1; i>=0; i--) {
+            for (int j = k; j <mat[i].length; j++) {
+                sum += mat[i][j];
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+            k++;
+        }
+        return sum;
+    }
+
+    public static int upperTriangle(int[][] mat){
+        int sum=0;
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length-i; j++) {
+                sum += mat[i][j];
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+        }
+        return sum;
+    }
+
+
     public static int sumOfDiagonal(int[][] arr){
         int sum=0;
         for (int i = 0; i < arr.length; i++) {
@@ -88,17 +116,24 @@ public class TwoDArray {
                 arr[row][col]=scan.nextInt();
             }
         }
-//
-//        System.out.println(isIdentity(arr));
-//        System.out.println(sumOfDiagonal(arr));
-//        sumOfRowWise(arr);
-//        sumOfColumnWise(arr);
-//        System.out.println(sumOfDiagonalI(arr));
+
+        System.out.println(isIdentity(arr));
+        System.out.println(sumOfDiagonal(arr));
+        sumOfRowWise(arr);
+        sumOfColumnWise(arr);
+        System.out.println(sumOfDiagonalI(arr));
         printX("Program");
+        int[][] mat={
+                {1,1,1},
+                {1,1,1},
+                {1,1,1}
+            };
+        System.out.println(upperTriangle(mat));
+        System.out.println(lowerTriangle(mat));
 
 
 
-        print(arr);
+//        print(arr);
     }
 
 
