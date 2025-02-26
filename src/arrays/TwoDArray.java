@@ -18,6 +18,18 @@ public class TwoDArray {
         return true;
     }
 
+    public static String sparseOrDense(int[][] mat){
+        int zeroCount=0;
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) {
+                if (mat[i][j] == 0)
+                    zeroCount++;
+            }
+        }
+        int total=mat.length*mat[0].length;
+        return (total-zeroCount)>zeroCount ? "DenseMatrix" : "SparseMatrix";
+    }
+
     public static int lowerTriangle(int[][] mat){
         int sum=0;
         int k=0;
@@ -104,32 +116,34 @@ public class TwoDArray {
         }
     }
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
+//        Scanner scan=new Scanner(System.in);
+////
+//        int rowSize=scan.nextInt();
+//        int[][] arr=new int[rowSize][];
 //
-        int rowSize=scan.nextInt();
-        int[][] arr=new int[rowSize][];
-
-        for(int row=0;row<rowSize;row++){
-            int colSize= scan.nextInt();
-            arr[row]=new int[colSize];
-            for (int col = 0; col < colSize; col++) {
-                arr[row][col]=scan.nextInt();
-            }
-        }
-
-        System.out.println(isIdentity(arr));
-        System.out.println(sumOfDiagonal(arr));
-        sumOfRowWise(arr);
-        sumOfColumnWise(arr);
-        System.out.println(sumOfDiagonalI(arr));
-        printX("Program");
+//        for(int row=0;row<rowSize;row++){
+//            int colSize= scan.nextInt();
+//            arr[row]=new int[colSize];
+//            for (int col = 0; col < colSize; col++) {
+//                arr[row][col]=scan.nextInt();
+//            }
+//        }
+//
+//        System.out.println(isIdentity(arr));
+//        System.out.println(sumOfDiagonal(arr));
+//        sumOfRowWise(arr);
+//        sumOfColumnWise(arr);
+//        System.out.println(sumOfDiagonalI(arr));
+//        printX("Program");
         int[][] mat={
-                {1,1,1},
-                {1,1,1},
-                {1,1,1}
+                {1,0,0},
+                {1,0,1},
+                {0,0,1},
+                {0,0,0}
             };
         System.out.println(upperTriangle(mat));
         System.out.println(lowerTriangle(mat));
+        System.out.println(sparseOrDense(mat));
 
 
 
