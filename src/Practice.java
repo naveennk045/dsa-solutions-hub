@@ -3,36 +3,43 @@
 import java.util.*;
 
 public class Practice{
+    public static int[] sort(int[] nums){
+        if(nums.length==1) return nums;
+        int mid=nums.length/2;
+
+       int[] left= sort(Arrays.copyOfRange(nums,0,mid));
+       int[] right=sort(Arrays.copyOfRange(nums,mid,nums.length));
+
+        return merge(left,right);
+
+
+    }
+
+
+    private static int[] merge(int[] left, int[] right) {
+        int i=0;
+        int j=0;
+        int k=0;
+        int[] arr=new int[left.length+ right.length];
+
+
+        while(i < left.length && j< right.length){
+            if(left[i]<right[j]){
+                arr[k++]=left[i++];
+            }else {
+                arr[k++]=right[j++];
+            }
+        }
+        while (i< left.length){
+            arr[k++]=left[i++];
+        }
+        while (i< right.length){
+            arr[k++]=right[i++];
+        }
+        return arr;
+    }
+
     public static void main(String[] args){
-
-        Scanner scan=new Scanner(System.in);
-
-        char[] letters=scan.nextLine().toCharArray();
-
-        HashMap<Character,Integer> map=new HashMap<>();
-
-
-
-
-        for(char ch: letters){
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        }
-//        System.out.println(map);
-
-        int length=0;
-        int ones=0;
-
-        for(Map.Entry<Character,Integer> entry : map.entrySet()){
-            int count=entry.getValue();
-            char ch=entry.getKey();
-
-            if(count>1 && count%2==0) length+=count;
-            else if(count>1 && count%2!=0) length+=count-1;
-            else ones++;
-        }
-        if(ones>0) length+=1;
-
-        System.out.println(length);
 
     }
 }
