@@ -1,6 +1,7 @@
 package slidingwindow.twopointers;
 
 public class SlidingWindowVariableSize {
+
     public static void printAllSubarrays(int[] arr) {
         for (int start = 0; start < arr.length; start++) {
             for (int end = start; end < arr.length; end++) {

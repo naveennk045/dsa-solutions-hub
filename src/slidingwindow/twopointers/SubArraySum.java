@@ -8,21 +8,15 @@ public class SubArraySum {
         int start = 0;
         int end = 0;
 
-        // Expand the window by moving end
         while (end < arr.length) {
-            // Add the current element to the window
             end++;
 
-            // When the window size reaches k, print the subarray
             if (end - start == k) {
-                // Print the subarray from start to end-1
                 List<Integer> subarray = new ArrayList<>();
                 for (int i = start; i < end; i++) {
                     subarray.add(arr[i]);
                 }
                 System.out.println(subarray);
-
-                // Slide the window by moving start pointer
                 start++;
             }
         }
