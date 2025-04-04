@@ -61,22 +61,23 @@ public class Problems {
 //        Shop-2
         int m2=scan.nextInt();
         int p2= scan.nextInt();
+
         int minCost=Integer.MAX_VALUE;
         int range=n/m1;
-//        System.out.println("Range : "+range);
+        System.out.println("Range : "+range);
         for(int i=0;i<range+1;i++){
             int remaining=n-(i*m1);
-//            System.out.println("Remaining : "+remaining);
+            System.out.println("Remaining : "+remaining);
             if(remaining%m2==0){
                 minCost=Math.min(minCost,(i*p1+(remaining/m2)*p2));
-//                System.out.println("MinCost : "+minCost);
+                System.out.println("MinCost : "+minCost);
             }
         }
         System.out.println(minCost);
     }
     public static void main(String[] args) {
-//        minimumCost();
+        minimumCost();
 //        automobileCompany();
-        goldbachPairs();
+//        goldbachPairs();
     }
 }

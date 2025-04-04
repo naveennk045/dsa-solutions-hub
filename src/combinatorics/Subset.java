@@ -36,7 +36,7 @@ public class Subset {
 
         generateSubset(nums,index+1,current,subsets);
 
-        current.remove(current.size()-1);
+        current.removeLast();
         generateSubset(nums,index+1,current,subsets);
 
     }

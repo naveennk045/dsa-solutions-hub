@@ -11,7 +11,7 @@ else
 fi
 
 # Define the commit message
-commit_message="feat(dsa): solve Day $next_day problems - subarray, substrings, using two pointers and sliding window"
+commit_message="feat(dsa): solve Day $next_day problems - subarray , substrings using two pointers and sliding window"
 
 # Add changes, commit, and push
 git add .

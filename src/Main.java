@@ -1,21 +1,22 @@
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        char[] set = {'a', 'b'};
-        int k = 3;
-        int n = set.length;
-        int total = (int) Math.pow(n, k);  // Total combinations = n^k
-
-        // Iterate through all numbers from 0 to total - 1
-        for (int i = 0; i < total; i++) {
-            int num = i;
-            String combination = "";
-            // Convert number to base-n representation to form the combination
-            for (int j = 0; j < k; j++) {
-                // Get the current digit (using modulo to find the index)
-                combination = set[num % n] + combination;
-                num /= n;  // Move to the next digit
-            System.out.println(combination);
+    public static boolean isPrime(int a){
+        for(int i=2;i<a;i++){
+            if(a%i==0)
+            {
+                return false;
             }
         }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=3;i<=n;i++){
+            if(isPrime(i)){
+                System.out.println(i);
+            }
+        }
+
     }
 }

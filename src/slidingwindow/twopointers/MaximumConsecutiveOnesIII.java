@@ -4,6 +4,24 @@ package slidingwindow.twopointers;
 //https://www.geeksforgeeks.org/problems/maximize-number-of-1s0905/0
 
 public class MaximumConsecutiveOnesIII {
+    public static int consecutiveSubsegments(char[] nums,int k){
+        int max=0;
+        int start=0,end=0,zeroCount=0;
+
+        while(end< nums.length){
+            if(nums[end]=='0') zeroCount++;
+
+            if(zeroCount<=k){
+                max=Math.max(end-start,max);
+            }
+            else{
+                zeroCount=0;
+                start=end;
+            }
+            end++;
+        }
+        return max;
+    }
 
     //  Brute-force approach
     public static int maxConsecutiveOnesI(int[] nums,int k){
@@ -40,5 +58,6 @@ public class MaximumConsecutiveOnesIII {
         int[] nums={1,0,1,0,1,1,0,1,1,1,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,0,1};
         System.out.println(maxConsecutiveOnesI(nums,5));
         System.out.println(maxConsecutiveOnesII(nums,5));
+
     }
 }
