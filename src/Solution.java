@@ -1,38 +1,34 @@
 import java.util.*;
 
+import static java.util.Collections.*;
 
-class Solution {
-    public static void main(String[] args) {
-        System.out.println(subarraySum(new int[]{1,2,3,7,5},12));
-    }
-    static ArrayList<Integer> subarraySum(int[] nums, int target) {
-        // code here
-        ArrayList<Integer> list=new ArrayList<>();
+public class Solution {
 
-        int left=0;
-        int right=0;
-        int length=nums.length;
-        int sum=0;
-        while(right<length){
-           sum+=nums[right];
-           if(sum>target){
-                sum-=nums[left];
-                left++;
-             }
-//            System.out.println(sum);
-            if(sum==target){
-                list.add(left+1);
-                list.add(right+1);
-                return list;
+    public static int getKthLargest(ArrayList<Integer> arr, int k) {
+
+        // Write your code here
+        ArrayList<Integer>  list = new ArrayList<>();
+
+        for(int i=0;i<arr.size();i++){
+            int sum=0;
+            for(int j=i;j<arr.size();j++){
+                sum+=arr.get(j);
+                list.add(sum);
             }
-
-            right++;
-            System.out.printf("left : %d , right : %d%n",left,right);
         }
+        list.sort(reverseOrder());
+        System.out.println(list);
 
-        list.add(-1);
-        return list;
+        return list.get(k-1);
+    }
 
+    public static void main(String[] args) {
+        ArrayList<Integer> list =new ArrayList<>();
 
+        list.add(3);
+        list.add(-2);
+        list.add(5);
+
+        System.out.println(getKthLargest(list,3));
     }
 }

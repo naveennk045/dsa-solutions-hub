@@ -1,12 +1,43 @@
 package slidingwindow.twopointers.constantwindow;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.PriorityQueue;
+import java.util.*;
 
 //https://leetcode.com/problems/sliding-window-maximum/description/
 
 public class SlidingWindowMax {
+    public static int[] maxSlidingWindowIII(int[] nums, int k) {
+        int n = nums.length;
+        Deque<Integer> deque = new LinkedList<>();
+        int[] result = new int[n - k + 1];
+
+        int left = 0, right = 0;  // Added left and right pointers
+
+        while (right < n) {
+            // Remove smaller elements from the back
+            while (!deque.isEmpty() && nums[deque.peekLast()] < nums[right]) {
+                deque.pollLast();
+            }
+
+            deque.offerLast(right);
+
+
+            // Remove elements out of the window (only when window size > k)
+            if (!deque.isEmpty() && !(deque.peekFirst() >= left && deque.peekFirst() <= right)) {
+                deque.pollFirst();
+            }
+
+            // If window has at least k elements, record the max
+            if (!deque.isEmpty() && right -left + 1 == k) {
+                result[left] = nums[deque.peekFirst()];
+                left++;  // Move window ahead
+            }
+
+
+            right++;
+        }
+
+        return result;
+    }
 
 //    Using a sliding window + heap
     public static int[] maxSlidingWindowII(int[] nums, int k) {
@@ -86,6 +117,8 @@ public class SlidingWindowMax {
         System.out.println(" Using Sliding window: "+Arrays.toString(result1));
         int[] result2=maxSlidingWindowII(nums,4);
         System.out.println(" Using Sliding window + Max heap: "+Arrays.toString(result2));
+        int[] result3=maxSlidingWindowIII(nums,4);
+        System.out.println(" Using Sliding window + Dequeue : "+Arrays.toString(result3));
     }
 
 
