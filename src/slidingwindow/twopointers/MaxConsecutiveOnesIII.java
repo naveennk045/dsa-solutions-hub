@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.constantwindow;
+package slidingwindow.twopointers;
 
 public class MaxConsecutiveOnesIII {
 

@@ -27,7 +27,8 @@ Since only one change is allowed the different combinations possible
  maximum reading with consecutive is 1011101 i.e 111 so 3 is the output.
  */
 
-public class ConsecutiveSubSegments {
+public class
+ConsecutiveSubSegments {
     public static void main(String[] args) {
         char[] s="1010101".toCharArray();
         int k=2;
