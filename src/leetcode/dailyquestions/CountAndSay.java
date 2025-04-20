@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dailyquestions;
 // Day - 1
 //https://leetcode.com/problems/count-and-say/description/
 public class CountAndSay {
