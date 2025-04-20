@@ -38,6 +38,8 @@ public class MentalModelForSlidingWindow {
         return minLength;
     }
 
+
+//  Dynamic window + Auxiliary space
     public static int longestSubstring(String str, int k) {
         HashMap<Character, Integer> frqMap = new HashMap<>();
 
