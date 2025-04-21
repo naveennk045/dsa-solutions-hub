@@ -5,20 +5,21 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args){
-        int[] nums={4,3,2,1,0,2,6};
+        int[] nums={4,2,1,3,5};
         sort(nums,0,nums.length);
         System.out.println(Arrays.toString(nums));
     }
 
     public static void sort(int[] nums, int start, int end) {
-           if(end-start==1) return;
+           if(end-start==0) return;
 
            int mid=start+(end-start)/2;
 
            sort(nums,start,mid);
-           sort(nums,mid,end);
+           sort(nums,mid+1,end);
 
-//           System.out.println(Arrays.toString(nums));
+           System.out.println("Splitting : "+Arrays.toString(nums));
+
 
            merge(nums,start,mid,end);
 
@@ -47,11 +48,9 @@ public class MergeSort {
             mergedArray[k++]=nums[j++];
         }
 
-        System.out.println(Arrays.toString(mergedArray));
+        System.out.println("Merging : "+Arrays.toString(mergedArray));
 
-        for(int l =0;l< mergedArray.length;l++){
-            nums[l+start]=mergedArray[l];
-        }
+        System.arraycopy(mergedArray, 0, nums, start, mergedArray.length);
 
     }
 }
