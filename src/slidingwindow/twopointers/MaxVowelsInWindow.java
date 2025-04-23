@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.constantwindow;
+package slidingwindow.twopointers;
 
 public class MaxVowelsInWindow {
     public static boolean isVowel(char ch) {

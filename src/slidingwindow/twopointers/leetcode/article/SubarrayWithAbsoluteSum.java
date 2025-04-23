@@ -1,8 +1,10 @@
-package slidingwindow.twopointers.beginners;
+package slidingwindow.twopointers.leetcode.article;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Scanner;
 import java.util.TreeMap;
+
 
 public class SubarrayWithAbsoluteSum {
 
@@ -129,5 +131,8 @@ public class SubarrayWithAbsoluteSum {
         System.out.println(longestSubarrayI(nums, 5));
         System.out.println(longestSubarrayII(nums, 5));
         System.out.println(longestSubarrayIII(nums,5));
+        System.out.println(7.0/2);
+
+        Scanner scanner = new Scanner(System.in);
     }
 }

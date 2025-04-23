@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.constantwindow;
+package slidingwindow.twopointers;
 
 //https://leetcode.com/problems/minimum-size-subarray-sum/
 
