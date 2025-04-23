@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.setone;
+package slidingwindow.constantwindow;
 //https://leetcode.com/problems/maximum-average-subarray-i/
 public class FindMaxAverage {
 

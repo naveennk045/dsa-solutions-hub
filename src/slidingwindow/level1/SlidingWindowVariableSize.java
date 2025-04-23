@@ -1,4 +1,4 @@
-package slidingwindow.twopointers;
+package slidingwindow.level1;
 
 public class SlidingWindowVariableSize {
 

@@ -1,4 +1,4 @@
-package slidingwindow.twopointers;
+package slidingwindow.level1;
 
 public class SubarraysWithBoundedMax {
     public static int numSubarrayBoundedMax(int[] nums, int left, int right) {

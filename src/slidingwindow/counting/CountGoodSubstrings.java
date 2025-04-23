@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.setone;
+package slidingwindow.counting;
 
 import java.util.HashMap;
 

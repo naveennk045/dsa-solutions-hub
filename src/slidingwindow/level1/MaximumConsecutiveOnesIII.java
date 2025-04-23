@@ -1,4 +1,4 @@
-package slidingwindow.twopointers;
+package slidingwindow.level1;
 
 //https://leetcode.com/problems/max-consecutive-ones-iii/description/
 //https://www.geeksforgeeks.org/problems/maximize-number-of-1s0905/0

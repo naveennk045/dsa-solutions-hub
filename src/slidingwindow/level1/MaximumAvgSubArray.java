@@ -1,4 +1,4 @@
-package slidingwindow.twopointers;
+package slidingwindow.level1;
 
 //https://leetcode.com/problems/maximum-average-subarray-i/description/
 

@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.setone;
+package slidingwindow.level1;
 
 
 import java.util.Arrays;

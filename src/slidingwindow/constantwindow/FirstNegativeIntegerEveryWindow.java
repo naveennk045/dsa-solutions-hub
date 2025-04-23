@@ -1,4 +1,4 @@
-package slidingwindow.level1;
+package slidingwindow.constantwindow;
 
 import java.util.ArrayList;
 

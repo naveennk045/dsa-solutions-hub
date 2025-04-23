@@ -1,4 +1,4 @@
-package slidingwindow.twopointers;
+package slidingwindow.constantwindow;
 
 public class MaximumPointObtainFromCards {
     public static int maxScore(int[] nums, int k) {

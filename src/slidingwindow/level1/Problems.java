@@ -1,9 +1,8 @@
-package slidingwindow.twopointers;
+package slidingwindow.level1;
 
 //templates for two pointer and sliding window
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class Problems {
 

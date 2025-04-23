@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.leetcode.article;
+package slidingwindow.leetcode.article;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

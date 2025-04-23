@@ -1,4 +1,4 @@
-package slidingwindow.twopointers.setone;
+package slidingwindow.counting;
 
 import java.util.HashMap;
 
@@ -9,7 +9,7 @@ public class SubarraysWithKDistinct {
         return countAtMostK(nums, k) - countAtMostK(nums, k - 1);
     }
 
-    private static int countAtMostK(int[] nums, int k) {
+    public static int countAtMostK(int[] nums, int k) {
         int left = 0;
         int count = 0;
         HashMap<Integer, Integer> map = new HashMap<>();

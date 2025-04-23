@@ -1,4 +1,4 @@
-package slidingwindow.twopointers;
+package slidingwindow.level1;
 
 public class MaxEnemyForts {
     public static int captureForts(int[] forts) {
