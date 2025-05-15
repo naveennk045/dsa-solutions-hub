@@ -7,7 +7,7 @@ import java.util.LinkedList;
 public class SlidingWindowMaximum {
     public static int[] maxSlidingWindow(int[] nums, int k) {
         
-    /*    there are many ways to find the sliding window maximum problem using 
+    /*    there are many ways to find the sliding window maximum microsoft using
             priority queue ( heap )
             Normal sliding window and update the max based on the outgoing and incoming element
             Monotonic queue    

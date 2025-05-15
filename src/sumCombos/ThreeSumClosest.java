@@ -29,7 +29,7 @@ public class ThreeSumClosest {
     }
 
 
-    // This is my brute force approach for this problem using hash set n3
+    // This is my brute force approach for this microsoft using hash set n3
     public static int threeSumClosestI(int[] nums, int target) {
         int n = nums.length;
         int closestSum = nums[0] + nums[1] + nums[2]; // initialize to first triplet
