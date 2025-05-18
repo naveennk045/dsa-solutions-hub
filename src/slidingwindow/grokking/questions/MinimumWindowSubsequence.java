@@ -2,7 +2,8 @@ package slidingwindow.grokking.questions;
 
 public class MinimumWindowSubsequence {
 
-    public static String minWindow(String S, String T) {
+//    https://www.naukri.com/code360/problems/minimum-window-subsequence_2181133
+    public static String minWindowI(String S, String T) {
         int[] tFrequency = new int[128];
 
         for (char ch : T.toCharArray()) {
@@ -15,8 +16,7 @@ public class MinimumWindowSubsequence {
 
         for (int right = 0, left = 0; right < S.length(); right++) {
 
-            if (tFrequency[sourceArray[right]]-- > 0)
-                count++;
+            if (tFrequency[sourceArray[right]]-- > 0) count++;
 
             while (count == total) {
                 if (!isSubsequence(S.substring(left, right + 1), T)) break;
@@ -24,8 +24,7 @@ public class MinimumWindowSubsequence {
                     minWindow[0] = left;
                     minWindow[1] = right;
                 }
-                if (tFrequency[sourceArray[left]] == 0)
-                    count--;
+                if (tFrequency[sourceArray[left]] == 0) count--;
 
                 tFrequency[sourceArray[left]]++;
                 left++;
@@ -46,6 +45,6 @@ public class MinimumWindowSubsequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(minWindow("forever", "ove"));
+        System.out.println(minWindowI("forever", "ove"));
     }
 }
