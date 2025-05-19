@@ -1,4 +1,4 @@
-package arrays.twoDarrays;
+package matrix;
 
 public class Traversal {
     public static void basicTraversal(int[][] matrix){
