@@ -3,7 +3,7 @@ package slidingwindow.grokking.questions;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
-
+//https://leetcode.com/problems/sliding-subarray-beauty/
 public class SlidingSubarrayBeauty {
     public static int[] getSubarrayBeauty(int[] nums, int k, int x) {
         TreeMap<Integer, Integer> map = new TreeMap<>();
