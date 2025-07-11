@@ -67,7 +67,7 @@ public class SubarrayWithAbsoluteSum {
 
     }
 
-    //  Using Sliding window +  Tree map
+    //  Using Sliding window +  tree map
     public static int longestSubarrayII(int[] nums, int limit) {
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();
         int windowStart = 0, windowEnd = 0;

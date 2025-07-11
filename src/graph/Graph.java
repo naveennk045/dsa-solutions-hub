@@ -3,7 +3,7 @@ package graph;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Graph<T> {
+public class    Graph<T> {
     private int noOfVertices;
     private boolean isDirected;
     private HashMap<T, HashMap<T, Integer>> adjList;  // use can also use your custom datatype for storing weight
