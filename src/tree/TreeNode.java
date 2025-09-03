@@ -1,17 +1,17 @@
 package tree;
 
 public class TreeNode <T> {
-        public T value;
+        public T val;
         public TreeNode<T> left;
         public TreeNode<T> right;
 
         public TreeNode(T value, TreeNode<T> left, TreeNode<T> right) {
-                this.value = value;
+                this.val = value;
                 this.left = left;
                 this.right = right;
         }
 
         public TreeNode(T value) {
-                this.value = value;
+                this.val = value;
         }
 }

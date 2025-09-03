@@ -17,7 +17,7 @@ public class TraversalAlgorithms {
     public static void inOrder(TreeNode<Integer> root) {
         if (root == null) return;
         inOrder(root.left);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         inOrder(root.right);
     }
 
@@ -25,7 +25,7 @@ public class TraversalAlgorithms {
     public static void preOrder(TreeNode<Integer> root) {
         if (root == null) return;
 
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         preOrder(root.left);
         preOrder(root.right);
     }
@@ -36,7 +36,7 @@ public class TraversalAlgorithms {
 
         postOrder(root.left);
         postOrder(root.right);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
 
 
     }
@@ -47,7 +47,7 @@ public class TraversalAlgorithms {
         queue.offer(root);
         while (!queue.isEmpty()) {
             root = queue.poll();
-            System.out.print(root.value + " ");
+            System.out.print(root.val + " ");
 
             if (root.left != null) queue.add(root.left);
             if (root.right != null) queue.add(root.right);
