@@ -19,26 +19,20 @@ public class BalanceCheck {
         root.left.right = new TreeNode(5);
 
         // Call Solution
-        Solution solution = new Solution();
-        System.out.println(solution.isBalanced(root));
-
-
-    }
-}
-
-class Solution {
-
-    public boolean isBalanced(TreeNode root) {
-        return Solution.findHeight(root) != -1;
+        System.out.println(isBalanced(root));
     }
 
-    public static int findHeight(TreeNode root) {
+    public static boolean isBalanced(TreeNode root) {
+        return isBalanceHelper(root) != -1;
+    }
+
+    private static int isBalanceHelper(TreeNode root) {
 
         if (root == null) return 0;
 
-        int leftHeight = findHeight(root.left);
+        int leftHeight = isBalanceHelper(root.left);
         if (leftHeight == -1) return -1;
-        int rightHeight = findHeight(root.right);
+        int rightHeight = isBalanceHelper(root.right);
         if (rightHeight == -1) return -1;
 
         if (Math.abs(leftHeight - rightHeight) > 1) {
