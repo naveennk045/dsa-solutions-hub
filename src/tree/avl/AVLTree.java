@@ -13,7 +13,7 @@ public class AVLTree {
 
         // Initialize root. Height is 1 because it's a leaf now.
         root = new AVLTreeNode(values[0]);
-        root.height = 1;
+        root.height = 0;
 
         for (int i = 1; i < n; i++) {
             root = insertHelper(values[i], root);
@@ -25,7 +25,7 @@ public class AVLTree {
 
         if (root == null) {
             AVLTreeNode newNode = new AVLTreeNode(value);
-            newNode.height = 1;
+            newNode.height = 0;
             return newNode;
         }
 
@@ -54,7 +54,7 @@ public class AVLTree {
     }
 
     private int calculateHeight(AVLTreeNode node) {
-        if (node == null) return 0;
+        if (node == null) return -1;
         return 1 + Math.max(calculateHeight(node.left), calculateHeight(node.right));
     }
 
