@@ -39,7 +39,7 @@ public class SubstringWithConcatenation {
     // Optimized approach
     public static List<Integer> findSubstringII(String s, String[] words) {
         List<Integer> indices = new ArrayList<>();
-        if (s == null || s.length() == 0 || words == null || words.length == 0)
+        if (s == null || s.isEmpty() || words == null || words.length == 0)
             return indices;
 
         Map<String, Integer> wordsFreq = new HashMap<>();
