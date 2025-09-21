@@ -28,8 +28,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-## Mine
 src/sandbox/Solution.java
 
 .idea/
