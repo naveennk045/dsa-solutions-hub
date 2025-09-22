@@ -35,21 +35,23 @@ public class TrappingRainWater {
         while (left < right) {
 
             if (height[left] <= height[right]) {
-                leftMax = Math.max(leftMax, height[left]);
-                System.out.println(leftMax);
-                totalWater += Math.min(leftMax, rightMax) - height[left];
+                if(height[left] >= leftMax){
+                    leftMax = height[left];
+                }else{
+                    totalWater +=  leftMax - height[left];
+                }
                 left++;
             } else {
-                System.out.println(rightMax);
-                rightMax = Math.max(rightMax, height[right]);
-                totalWater += Math.min(leftMax, rightMax) - height[right];
+                if(height[right] >= rightMax){
+                    rightMax = height[right];
+                }else{
+                    totalWater +=  rightMax - height[right];
+                }
                 right--;
             }
         }
         return totalWater;
     }
-
-
     public static void main(String[] args) {
         int[] heights = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         System.out.println(trapI(heights));
