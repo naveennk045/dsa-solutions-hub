@@ -20,7 +20,7 @@ public class LinkedList {
         }
     }
 
-    // addLat
+    // addLast
     public void addLast(int value){
         if(head==null){
             addFirst(value);

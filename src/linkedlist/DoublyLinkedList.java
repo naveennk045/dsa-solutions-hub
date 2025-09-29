@@ -6,7 +6,7 @@ public class DoublyLinkedList {
     private int size;
 
     public DoublyLinkedList() {
-        this.size=0;
+        this.size = 0;
     }
 
     private class Node {
@@ -40,53 +40,49 @@ public class DoublyLinkedList {
         Node tempNode = head;
 
         while (tempNode != null) {
-            if(data== tempNode.value){
+            if (data == tempNode.value) {
                 return tempNode;
             }
             tempNode = tempNode.next;
         }
         return null;
     }
+    
 
-
-
-
-    public void addFirst(int data){
-        Node newNode=new Node(data);
-        newNode.next=head;
-        newNode.previous=null;
-        if (head != null){
-            head.previous=newNode;
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        newNode.previous = null;
+        if (head != null) {
+            head.previous = newNode;
         }
-        head=newNode;
-
+        head = newNode;
 
 
         if (tail == null) {
-            tail=head;
+            tail = head;
         }
         size++;
     }
 
 
+    public void addLast(int data) {
 
-    public void addLast(int data){
-
-        if(size==0){
+        if (size == 0) {
             addFirst(data);
             return;
         }
-        Node newNode =new Node(data);
-        newNode.previous=tail;
-        newNode.next=null;
-        tail.next=newNode;
-        tail=newNode;
+        Node newNode = new Node(data);
+        newNode.previous = tail;
+        newNode.next = null;
+        tail.next = newNode;
+        tail = newNode;
 
         size++;
 
     }
 
-    public void add(int index,int data){
+    public void add(int index, int data) {
 
         if (index < 0 || index > size) {
             throw new RuntimeException("Index out of bounds");
@@ -115,25 +111,25 @@ public class DoublyLinkedList {
 
     public void display() {
 
-        Node tempNode=head;
+        Node tempNode = head;
 
-        System.out.print("null"+ " <-> ");
+        System.out.print("null" + " <-> ");
         while (tempNode != null) {
             System.out.print(tempNode.value + " <-> ");
-            tempNode=tempNode.next;
+            tempNode = tempNode.next;
         }
         System.out.println("null");
 
     }
 
-    public void displayReverse(){
+    public void displayReverse() {
 
-        Node tempNode=tail;
+        Node tempNode = tail;
 
-        System.out.print("null"+ " <-> ");
+        System.out.print("null" + " <-> ");
         while (tempNode != null) {
             System.out.print(tempNode.value + " <-> ");
-            tempNode=tempNode.previous;
+            tempNode = tempNode.previous;
         }
         System.out.println("null");
 
@@ -141,7 +137,7 @@ public class DoublyLinkedList {
 
     public static void main(String[] args) {
 
-        DoublyLinkedList dList=new DoublyLinkedList();
+        DoublyLinkedList dList = new DoublyLinkedList();
 
         dList.addFirst(56);
         dList.addFirst(57);
@@ -155,9 +151,8 @@ public class DoublyLinkedList {
 
         dList.display();
 
-        dList.add(3,57);
+        dList.add(3, 57);
         dList.display();
-
 
 
     }
