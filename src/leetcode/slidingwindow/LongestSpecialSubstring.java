@@ -6,7 +6,9 @@ import java.util.HashSet;
 public class LongestSpecialSubstring {
 
     public static int maximumLengthV1(String s) {
-
+        /*
+        * This is the brute force approach.
+        */
         HashMap<String, Integer> freqMap = new HashMap<>();
         HashSet<Character> set;
 
