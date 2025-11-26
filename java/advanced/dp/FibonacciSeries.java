@@ -1,4 +1,4 @@
-package leetcode.dp;
+package advanced.dp;
 
 import java.util.HashMap;
 

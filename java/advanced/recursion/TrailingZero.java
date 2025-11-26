@@ -1,4 +1,4 @@
-package leetcode.recursion;
+package advanced.recursion;
 
 public class TrailingZero {
 

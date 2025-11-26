@@ -1,4 +1,4 @@
-package leetcode;
+package advanced;
 
 public class Solution {
     public static String removeDigit(String number, char digit) {

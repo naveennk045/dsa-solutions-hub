@@ -1,7 +1,7 @@
-package leetcode.recursion;
+package advanced.recursion;
 
-import leetcode.tree.ListNode;
-import leetcode.tree.TreeNode;
+import advanced.core.ListNode;
+import advanced.core.TreeNode;
 
 public class ConstructTree {
 

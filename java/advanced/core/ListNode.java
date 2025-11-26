@@ -1,4 +1,4 @@
-package leetcode.tree;
+package advanced.core;
 
 public class ListNode {
     public int val;
