@@ -9,54 +9,54 @@ public class NearestCell {
 
     public static int[][] updateMatrix(int[][] mat) {
 
+        int row = mat.length, col = mat[0].length;
         Queue<int[]> queue = new LinkedList<>();
+        int[][] distance = new int[row][col];
 
 
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat[0].length; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+
                 if (mat[i][j] == 0) {
                     queue.add(new int[]{i, j});
+                } else {
+                    distance[i][j] = Integer.MAX_VALUE;
                 }
             }
         }
-        return findDistanceUsingBFS(mat, );
+        findDistanceUsingBFS(mat, queue, distance);
+        return distance;
     }
 
-    public static int[][] findDistanceUsingBFS(int[][] matrix, Queue<int[]> queue) {
-
-        int row = matrix.length, col = matrix[0].length;
+    public static void findDistanceUsingBFS(int[][] matrix, Queue<int[]> queue, int[][] distance) {
         boolean[][] visited = new boolean[matrix.length][matrix[0].length];
-        int[][] distance = new int[row][col];
 
-        int levels = 0;
 
         while (!queue.isEmpty()) {
 
-            int size = queue.size();
-            while (size-- > 0) {
+            int[] removedCell = queue.poll();
+            int rRow = removedCell[0];
+            int rCol = removedCell[1];
+            visited[rRow][rCol] = true;
 
-                int[] removedCell = queue.poll();
-                for (int[] direction : directions) {
+            for (int[] direction : directions) {
 
-                    int newRow = removedCell[0] + direction[0];
-                    int newCol = removedCell[1] + direction[1];
-                    if (!isValidCell(matrix, newRow, newCol)) {
-                        continue;
-                    }
-                    if (!visited[newRow][newCol] && matrix[newRow][newCol] == 1) {
+                int newRow = direction[0] + rRow;
+                int newCol = direction[1] + rCol;
 
-                        visited[newRow][newCol] = true;
-                        queue.add(new int[]{newRow, newCol});
+                if (!isValidCell(matrix, newRow, newCol)) continue;
 
-                    } else if (matrix[newRow][newCol] == 0) {
-                        continue;
-                    }
+                if (!visited[newRow][newCol] &&
+                        distance[newRow][newCol] > distance[rRow][rCol] + 1) {
+                    visited[newRow][newCol] = true;
+                    distance[newRow][newCol] = distance[rRow][rCol] + 1;
+
+                    queue.add(new int[]{newRow, newCol});
                 }
             }
-            levels++;
+
         }
 
-        return distance;
     }
 
     public static boolean isValidCell(int[][] matrix, int row, int col) {
