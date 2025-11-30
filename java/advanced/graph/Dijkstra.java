@@ -2,7 +2,7 @@ package advanced.graph;
 
 import java.util.*;
 
-public class DijkstraAlgorithm {
+public class Dijkstra {
 
     private static class Pair {
         int value;
