@@ -16,9 +16,6 @@ public class BellmanFord {
         If there is the negative cycle edge means we cannot be able to find the shortest path for all.
         */
 
-        /*
-        Before that I need to know about
-        * */
 
 
         return distance;
