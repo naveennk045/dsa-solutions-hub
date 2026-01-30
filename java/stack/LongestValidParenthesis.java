@@ -2,9 +2,9 @@ package stack;
 
 import java.util.Stack;
 
-public class RemoveParentheses {
+public class LongestValidParenthesis {
 
-    public static String minRemoveToMakeValid(String s) {
+    public static int longestValidParentheses(String s) {
         int n = s.length();
 
         boolean[] isValid = new boolean[n];
@@ -24,23 +24,14 @@ public class RemoveParentheses {
             }
         }
 
-        StringBuilder ans = new StringBuilder();
+        int maxLength = 0;
+        int count = 0;
+        for (boolean item : isValid) {
+            if (item) count++;
+            else count = 0;
 
-        for (int i = 0; i < n; i++) {
-
-            char currChar = s.charAt(i);
-            if(currChar == '(' || currChar == ')' ){
-                if(isValid[i]){
-                    ans.append(currChar);
-                }
-            }else{
-                ans.append(currChar);
-            }
+            maxLength = Math.max(count, maxLength);
         }
-        return ans.toString();
-    }
-
-    public static void main(String[] args) {
-
+        return maxLength;
     }
 }
